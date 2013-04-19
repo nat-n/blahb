@@ -31,8 +31,7 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1>
-<a></a>About blahb</h1>
+        <h1>About blahb</h1>
 
 <p>The Better Looking Atlas of the Human Brain (Blahb) is a finely detailed anatomical segmentation of the <a href="http://www.bic.mni.mcgill.ca/ServicesAtlases/Colin27Highres">high-resolution version of the Colin 27 average brain</a>. It is intended to serve as a detailed, comprehensive neuroanatomical reference suitable specifically for generating appealing visualisations such as those featured by <a href="http://neuroanatomist.org">neuroanatomist</a>.</p>
 
@@ -40,15 +39,13 @@
 
 <p>blahb is designed to be extended and adapted as required and community contributions are welcome. The design philosophy is that any spatial feature of the brain which can be meaningfully and neatly segmented within the source image, should be. Thus different levels of granularity or systems of parcellation may coexist (e.g. lobes, gyri, sulci, brodmann areas, functional areas etc).</p>
 
-<p>Tools have been created for automatically processing set of layers exported from Seg3D2 and producing a single multilayer image and an accompanying <em>labels.txt</em> file (see <a href="#using_blahb"><em>Using blahb</em></a> for more details). If you have any queries which are not addressed in this documentation, feel free to email me: <em>(Nat Noordanus)  n **at</em>* natn.me*</p>
+<p>Tools have been created for automatically processing set of layers exported from Seg3D2 and producing a single multilayer image and an accompanying <em>labels.txt</em> file (see <a href="#using-blahb"><em>Using blahb</em></a> for more details). If you have any queries which are not addressed in this documentation, feel free to email me: <em>(Nat Noordanus)  n **at</em>* natn.me*</p>
 
-<h1>
-<a></a>Version 0.1.0</h1>
+<h1>About version 0.1.0</h1>
 
-<p>This is the first release of blahb. To summarise, it includes  a nearly complete segmentation of the gyri of the right hemisphere, and the left temporal lobe, as well as the lobes of the left hemisphere. It also includes segmentations of many major subcortical structures, including the cerebellum, brainstem, midbrain, basal ganglia, hypothalamus and right thalamus. A complete list of structures can be seen in the <em>labels.txt</em> available via the <a href="#getting_blahb"><em>Getting blahb</em></a> section.</p>
+<p>This is the first release of blahb. To summarise, it includes  a nearly complete segmentation of the gyri of the right hemisphere, and the left temporal lobe, as well as the lobes of the left hemisphere. It also includes segmentations of many major subcortical structures, including the cerebellum, brainstem, midbrain, basal ganglia, hypothalamus and right thalamus. A complete list of structures can be seen in the <em><a href="https://raw.github.com/gnatters/blahb/releases/0.1.0/blahb_labels_0_1_0.txt">labels.txt</a></em> available via the <a href="#getting-blahb"><em>Getting blahb</em></a> section.</p>
 
-<h1>
-<a></a>Getting blahb</h1>
+<h1>Getting blahb</h1>
 
 <p>Balhb is be available in three forms:</p>
 
@@ -56,11 +53,10 @@
 <li>three Seg3D2 projects (including layers for the right neocortex, left neocortex and subcortical regions respectively) from the <a href="https://github.com/gnatters/blahb">GitHub repository</a>
 </li>
 <li>
-<a href="">a set of NIfTI files</a> (one for each segment) which can be edited read or edited seperately</li>
+<a href="https://raw.github.com/gnatters/blahb/releases/0.1.0/blahb_segments_0_1_0.zip">a set of NIfTI files</a> (one for each segment) which can be edited read or edited seperately</li>
 <li>
-<a href="">a single NIfTI file</a> with an accompanying labels file.</li>
-</ul><h1>
-<a></a>Using blahb</h1>
+<a href="https://raw.github.com/gnatters/blahb/releases/0.1.0/blahb_0_1_0.nii.gz">a single NIfTI file</a> and an accompanying <a href="https://raw.github.com/gnatters/blahb/releases/0.1.0/blahb_labels_0_1_0.txt">labels</a> file.</li>
+</ul><h1>Using blahb</h1>
 
 <p>Blahb is specifically intended for visualisation purposes, however it may also be useful in other contexts.</p>
 
@@ -77,12 +73,11 @@
 
 <p>where the desired output format is indicated by the extension of the output path. There is also a <a href="https://gist.github.com/gnatters/5420859">ruby module</a> which includes a batch_convert method for automating the conversion of whole directories of images.</p>
 
-<p>Once the images have been converted to either .nii or .nii.gz and placed in a single directory, the <a href="https://gist.github.com/gnatters/5139065">mlv_merge.py</a> tool can be used to compile a single atlas image. This tool requires Python 2.7+ and relies upon the <a href="http://nipy.sourceforge.net/nibabel/">NiBabel package</a>. The tool takes a directory of single (or multi-) label NIfTI files and combines them into a single multilabel image, in which all the original labels are represented, and any overlaps between different labels are also represented as new labels. This image is then written as a single NIfTI file (called <em>merged_image.nii.gz</em> by default). It also produces a <em>labels.txt</em> file which contains a key, pairing each label value in the multilabel image with its name (derived from the name of the original label file or files). An example compiled atlas is available via the <a href="#getting_blahb"><strong>Getting blahb section</strong></a></p>
+<p>Once the images have been converted to either .nii or .nii.gz and placed in a single directory, the <a href="https://gist.github.com/gnatters/5139065">mlv_merge.py</a> tool can be used to compile a single atlas image. This tool requires Python 2.7+ and relies upon the <a href="http://nipy.sourceforge.net/nibabel/">NiBabel package</a>. The tool takes a directory of single (or multi-) label NIfTI files and combines them into a single multilabel image, in which all the original labels are represented, and any overlaps between different labels are also represented as new labels. This image is then written as a single NIfTI file (called <em>merged_image.nii.gz</em> by default). It also produces a <em>labels.txt</em> file which contains a key, pairing each label value in the multilabel image with its name (derived from the name of the original label file or files). An example compiled atlas is available via the <a href="#getting-blahb"><strong>Getting blahb section</strong></a></p>
 
 <p>For simply viewing NIfTI files, <a href="http://ric.uthscsa.edu/mango/">Mango</a> or <a href="http://rsb.info.nih.gov/ij/">ImageJ</a>.</p>
 
-<h1>
-<a></a>Contributing to blahb</h1>
+<h1>Contributing to blahb</h1>
 
 <p>Blahb is a work in progress and is far from finished. Your contributions are welcome, particularly in the form of</p>
 
@@ -94,20 +89,17 @@
 
 <p>Suggestions for larger contributions, collaborations or other ways to contribute are welcome via email.</p>
 
-<h1>
-<a></a>Credits</h1>
+<h1>Credits</h1>
 
 <p>balhb was is the creation of Nat Noordanus (project maintainer).
 Significant assistance with segmentation was given by Panos Dimitriou and <a href="https://github.com/lewishou">Lewis Hou</a> with help from an award from the <a href="http://www.ppls.ed.ac.uk/">PPLS</a> Teaching and Learning Initiative fund from The University of Edinburgh.</p>
 
-<h1>
-<a></a>License</h1>
+<h1>License</h1>
 
 <p><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en"><img alt="Creative Commons Lience" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png"></a>
 The Better Looking Atlas of the Human Brain (Blahb) by Nat Noordanus <a href="#credits">et al</a>. is licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
 
-<h1>
-<a></a>Citing blahb</h1>
+<h1>Citing blahb</h1>
 
 <p>If you wish to cite blahb you may use the following APA format:
 Noordanus, N. W., Dimitriou, P., Lewis, H. (2013). BLAHB: the Better Looking Atlas of the Human Brain (Version 0.1) [Digital Brain Atlas]. Available from <a href="https://github.com/gnatters/blahb">https://github.com/gnatters/blahb</a></p>
