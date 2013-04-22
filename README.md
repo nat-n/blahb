@@ -64,4 +64,4 @@ The Better Looking Atlas of the Human Brain (Blahb) by Nat Noordanus [et al](#cr
 Citing blahb
 =====
 If you wish to cite blahb you may use the following APA format:
-Noordanus, N. W., Dimitriou, P., Lewis, H. (2013). BLAHB: the Better Looking Atlas of the Human Brain (Version 0.1) [Digital Brain Atlas]. Available from https://github.com/gnatters/blahb
+Noordanus, N. W., Dimitriou, P., Hou, L. (2013). BLAHB: the Better Looking Atlas of the Human Brain (Version 0.1) [Digital Brain Atlas]. Available from https://github.com/gnatters/blahb
