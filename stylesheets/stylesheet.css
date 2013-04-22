@@ -159,6 +159,14 @@ img {
   -ms-box-shadow: 0 0 5px #ebebeb;
 }
 
+.link_image {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	opacity: 0.01;
+	width: 1px;
+}
+
 pre, code {
   width: 100%;
   color: #222;
